@@ -20,7 +20,9 @@ function App() {
       <header>
         <div className="border-b-2 flex flex-row items-center">
           <div className="basis-1/2">
-            <span className="ml-20 self-center text-3xl font-semibold text-purple-700">GaEr Co.</span>
+            <span className="ml-20 self-center text-3xl font-semibold">
+              GaEr Co.
+            </span>
           </div>
           <div className=" mr-20 flex justify-end basis-1/2">
             <Link to={"/"}>
@@ -34,12 +36,14 @@ function App() {
             </Link>
           </div>
         </div>
+      </header>
+      <div>
         <Routes>
           <Route path="/" element={<Start  />} />
           <Route path="/proyectos" element={<Projects />} />
           <Route path="/productos" element={<Products />} />
         </Routes>
-      </header>
+      </div>
     </div>
   );
 }
