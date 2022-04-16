@@ -18,28 +18,36 @@ function App() {
   return (
     <div>
       <header>
-        <div className="border-b-2 flex flex-row items-center">
+        <nav className="fixed w-full flex flex-row items-center bg-violet-800 shadow-lg">
           <div className="basis-1/2">
-            <span className="ml-20 self-center text-3xl font-semibold">
-              GaEr Co.
-            </span>
+            <Link to={"/"}>
+              <span className="ml-20 self-center text-3xl font-semibold text-purple-200">
+                GaEr Co.
+              </span>
+            </Link>
           </div>
           <div className=" mr-20 flex justify-end basis-1/2">
             <Link to={"/"}>
-              <button className="p-5">Inicio</button>
+              <button className="p-5 font-medium hover:text-violet-300 text-purple-50">
+                Inicio
+              </button>
             </Link>
             <Link to={"/proyectos"}>
-              <button className="p-5">Proyectos</button>
+              <button className="p-5 font-medium hover:text-violet-300 text-purple-50">
+                Proyectos
+              </button>
             </Link>
             <Link to={"/productos"}>
-              <button className="p-5">Productos</button>
+              <button className="p-5 font-medium hover:text-violet-300 text-purple-50">
+                Productos
+              </button>
             </Link>
           </div>
-        </div>
+        </nav>
       </header>
       <div>
         <Routes>
-          <Route path="/" element={<Start  />} />
+          <Route path="/" element={<Start />} />
           <Route path="/proyectos" element={<Projects />} />
           <Route path="/productos" element={<Products />} />
         </Routes>
