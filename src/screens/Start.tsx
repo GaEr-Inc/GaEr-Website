@@ -2,7 +2,7 @@ import React from 'react'
 
 function Start() {
   return (
-    <div>Start</div>
+    <div className="ml-20">Smthing to see</div>
   )
 }
 
