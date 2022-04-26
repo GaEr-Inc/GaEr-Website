@@ -8,17 +8,25 @@ import {
   UnstyledButton,
 } from "@mantine/core";
 import { Link, Route, Router, Routes } from "react-router-dom";
+import { useWindowScroll } from "@mantine/hooks";
 import Start from "./screens/Start";
 import Projects from "./screens/Projects";
 import Products from "./screens/Products";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [scroll, scrollTo] = useWindowScroll();
 
   return (
     <div>
       <header>
-        <nav className="fixed w-full flex flex-row items-center bg-violet-800 shadow-lg">
+        <nav
+          className={`fixed
+         w-full
+          flex
+           flex-row items-center ${
+             scroll.y === 0 ? "bg-violet-800" : "bg-gray-800"
+           } shadow-lg`}
+        >
           <div className="basis-1/2">
             <Link to={"/"}>
               <span className="ml-20 self-center text-3xl font-semibold text-purple-200">
